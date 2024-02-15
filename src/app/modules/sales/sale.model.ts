@@ -7,6 +7,7 @@ const saleSchema = new Schema<TSale>(
     buyerName: { type: String, required: true },
     saleDate: { type: Date, required: true },
     productId: { type: Schema.Types.ObjectId, ref: 'Product', required: true },
+    productPrice: { type: Number, required: true },
   },
   { timestamps: true },
 );

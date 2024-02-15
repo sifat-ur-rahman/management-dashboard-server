@@ -6,6 +6,7 @@ const saleValidationSchema = z.object({
     quantity: z.number().positive(),
     buyerName: z.string().min(1),
     saleDate: z.string(),
+    productPrice: z.number(),
   }),
 });
 

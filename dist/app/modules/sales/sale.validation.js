@@ -7,6 +7,7 @@ const saleValidationSchema = zod_1.z.object({
         quantity: zod_1.z.number().positive(),
         buyerName: zod_1.z.string().min(1),
         saleDate: zod_1.z.string(),
+        productPrice: zod_1.z.number(),
     }),
 });
 exports.default = saleValidationSchema;

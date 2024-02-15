@@ -1,9 +1,9 @@
 import { Types } from 'mongoose';
 
-export type TSale = {
+export type TAddToCard = {
   productId: Types.ObjectId;
-  quantity: number;
   buyerName: string;
-  saleDate: Date;
+  buyerId: Types.ObjectId;
+  productImg: string;
   productPrice: number;
 };
