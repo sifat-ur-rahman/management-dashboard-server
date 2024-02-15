@@ -6,6 +6,7 @@ const productValidationSchema = z.object({
   body: z.object({
     name: z.string().min(1),
     img: z.string(),
+    createdBy: z.string(),
     price: z.number(),
     quantity: z.number(),
     releaseDate: z.string(),
@@ -31,6 +32,7 @@ const productUpdateValidationSchema = z.object({
   body: z.object({
     name: z.string().optional(),
     img: z.string().optional(),
+    createdBy: z.string().optional(),
     price: z.number().optional(),
     quantity: z.number().optional(),
     releaseDate: z.string().optional(),

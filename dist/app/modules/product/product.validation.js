@@ -7,6 +7,7 @@ const productValidationSchema = zod_1.z.object({
     body: zod_1.z.object({
         name: zod_1.z.string().min(1),
         img: zod_1.z.string(),
+        createdBy: zod_1.z.string(),
         price: zod_1.z.number(),
         quantity: zod_1.z.number(),
         releaseDate: zod_1.z.string(),
@@ -30,6 +31,7 @@ const productUpdateValidationSchema = zod_1.z.object({
     body: zod_1.z.object({
         name: zod_1.z.string().optional(),
         img: zod_1.z.string().optional(),
+        createdBy: zod_1.z.string().optional(),
         price: zod_1.z.number().optional(),
         quantity: zod_1.z.number().optional(),
         releaseDate: zod_1.z.string().optional(),
