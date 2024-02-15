@@ -55,6 +55,21 @@ const getOneProduct = (req, res, next) => __awaiter(void 0, void 0, void 0, func
         next(err);
     }
 });
+const getAllProductById = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const { productId } = req.params;
+        const result = yield product_service_1.ProductService.getAllProductsByIdFromDB(productId);
+        res.status(200).json({
+            success: true,
+            statusCode: 200,
+            message: 'Products By user ID retrieved successfully',
+            data: result,
+        });
+    }
+    catch (err) {
+        next(err);
+    }
+});
 const updateProduct = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const id = req.params.productId;
@@ -129,4 +144,5 @@ exports.ProductControllers = {
     deletedProduct,
     duplicateProduct,
     bulkDeletedProduct,
+    getAllProductById,
 };

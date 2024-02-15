@@ -83,6 +83,11 @@ const getOneProductFromDB = async (id: string) => {
 
   return result;
 };
+const getAllProductsByIdFromDB = async (id: string) => {
+  const result = await Product.find({ createdBy: id });
+
+  return result;
+};
 const updateProductFromDB = async (
   id: string,
   updatedProductData: Partial<TProduct>,
@@ -159,4 +164,5 @@ export const ProductService = {
   deleteOneProductFromDB,
   duplicateProductFromDB,
   bulkDeletedProductFromDB,
+  getAllProductsByIdFromDB,
 };

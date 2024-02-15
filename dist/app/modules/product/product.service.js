@@ -79,6 +79,10 @@ const getOneProductFromDB = (id) => __awaiter(void 0, void 0, void 0, function* 
     const result = yield product_model_1.Product.findById(id);
     return result;
 });
+const getAllProductsByIdFromDB = (id) => __awaiter(void 0, void 0, void 0, function* () {
+    const result = yield product_model_1.Product.find({ createdBy: id });
+    return result;
+});
 const updateProductFromDB = (id, updatedProductData) => __awaiter(void 0, void 0, void 0, function* () {
     const { dimensions } = updatedProductData, remainingStudentData = __rest(updatedProductData, ["dimensions"]);
     const modifiedUpdatedData = Object.assign({}, remainingStudentData);
@@ -128,4 +132,5 @@ exports.ProductService = {
     deleteOneProductFromDB,
     duplicateProductFromDB,
     bulkDeletedProductFromDB,
+    getAllProductsByIdFromDB,
 };

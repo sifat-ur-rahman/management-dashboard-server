@@ -58,6 +58,25 @@ const getOneProduct = async (
     next(err);
   }
 };
+const getAllProductById = async (
+  req: Request,
+  res: Response,
+  next: NextFunction,
+) => {
+  try {
+    const { productId } = req.params;
+    const result = await ProductService.getAllProductsByIdFromDB(productId);
+
+    res.status(200).json({
+      success: true,
+      statusCode: 200,
+      message: 'Products By user ID retrieved successfully',
+      data: result,
+    });
+  } catch (err) {
+    next(err);
+  }
+};
 
 const updateProduct = async (
   req: Request,
@@ -155,4 +174,5 @@ export const ProductControllers = {
   deletedProduct,
   duplicateProduct,
   bulkDeletedProduct,
+  getAllProductById,
 };
