@@ -6,6 +6,7 @@ import { Model } from 'mongoose';
 export type TProduct = {
   name: string;
   img: string;
+  createdBy: string;
   price: number;
   quantity: number;
   releaseDate: Date;
