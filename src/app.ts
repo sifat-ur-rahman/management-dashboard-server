@@ -21,7 +21,6 @@ app.use(
 app.use('/', ProductRoute);
 app.use('/', SaleRoute);
 app.use('/', AddToCardRoute);
-
 app.use('/', UserRoute);
 app.use('/', AuthRoutes);
 
