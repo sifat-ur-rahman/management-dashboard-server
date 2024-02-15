@@ -7,6 +7,7 @@ import globalErrorHandler from './app/middlewares/globalErrorHandler';
 import { ProductRoute } from './app/modules/product/product.route';
 import { UserRoute } from './app/modules/user/user.route';
 import { AuthRoutes } from './app/modules/auth/auth.route';
+import { AddToCardRoute } from './app/modules/addToCard/addToCard.route';
 
 const app: Application = express();
 
@@ -19,6 +20,7 @@ app.use(
 
 app.use('/', ProductRoute);
 app.use('/', SaleRoute);
+app.use('/', AddToCardRoute);
 
 app.use('/', UserRoute);
 app.use('/', AuthRoutes);

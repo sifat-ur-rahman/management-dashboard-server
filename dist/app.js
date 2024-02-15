@@ -10,12 +10,14 @@ const globalErrorHandler_1 = __importDefault(require("./app/middlewares/globalEr
 const product_route_1 = require("./app/modules/product/product.route");
 const user_route_1 = require("./app/modules/user/user.route");
 const auth_route_1 = require("./app/modules/auth/auth.route");
+const addToCard_route_1 = require("./app/modules/addToCard/addToCard.route");
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
 app.use((0, cors_1.default)({ origin: 'https://merry-torte-663ccf.netlify.app', credentials: true }));
 //application route.
 app.use('/', product_route_1.ProductRoute);
 app.use('/', sale_route_1.SaleRoute);
+app.use('/', addToCard_route_1.AddToCardRoute);
 app.use('/', user_route_1.UserRoute);
 app.use('/', auth_route_1.AuthRoutes);
 app.get('/', (req, res) => {
