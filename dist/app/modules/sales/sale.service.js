@@ -19,7 +19,7 @@ const AppError_1 = __importDefault(require("../../errors/AppError"));
 const product_model_1 = require("../product/product.model");
 const sale_model_1 = require("./sale.model");
 const createSalesIntoDB = (Data) => __awaiter(void 0, void 0, void 0, function* () {
-    const { productId, quantity, buyerName, saleDate } = Data;
+    const { productId, quantity, buyerName, saleDate, productPrice } = Data;
     // Validate product existence
     const productData = yield product_model_1.Product.findById(productId);
     if (!productData) {
@@ -35,6 +35,7 @@ const createSalesIntoDB = (Data) => __awaiter(void 0, void 0, void 0, function* 
         quantity,
         buyerName,
         saleDate,
+        productPrice,
     });
     // Update the inventory
     productData.quantity -= quantity;

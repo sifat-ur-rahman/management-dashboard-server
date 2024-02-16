@@ -9,12 +9,12 @@ import addToCardValidationSchema from './addToCard.validation';
 const router = express.Router();
 
 router.post(
-  '/api/addToCard',
+  '/api/add-to-card',
   //auth('user'),
   validateRequest(addToCardValidationSchema),
   AddToProductControllers.createAddToCard,
 );
 
-router.get('/api/addToCard/:id', AddToProductControllers.getAllAddToCardById);
+router.get('/api/add-to-card/:id', AddToProductControllers.getAllAddToCardById);
 
 export const AddToCardRoute = router;

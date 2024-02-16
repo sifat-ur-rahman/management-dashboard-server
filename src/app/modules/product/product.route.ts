@@ -24,7 +24,7 @@ router.delete('/api/bulk-delete', ProductControllers.bulkDeletedProduct);
 router.put(
   '/api/product/:productId',
   //auth('user'),
-  validateRequest(productValidation.productUpdateValidationSchema),
+  // validateRequest(productValidation.productUpdateValidationSchema),
   ProductControllers.updateProduct,
 );
 router.post(

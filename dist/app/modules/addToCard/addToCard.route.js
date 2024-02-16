@@ -10,8 +10,8 @@ const addToCard_controller_1 = require("./addToCard.controller");
 const addToCard_validation_1 = __importDefault(require("./addToCard.validation"));
 //import auth from '../../middlewares/auth';
 const router = express_1.default.Router();
-router.post('/api/addToCard', 
+router.post('/api/add-to-card', 
 //auth('user'),
 (0, validateRequest_1.default)(addToCard_validation_1.default), addToCard_controller_1.AddToProductControllers.createAddToCard);
-router.get('/api/addToCard/:id', addToCard_controller_1.AddToProductControllers.getAllAddToCardById);
+router.get('/api/add-to-card/:id', addToCard_controller_1.AddToProductControllers.getAllAddToCardById);
 exports.AddToCardRoute = router;

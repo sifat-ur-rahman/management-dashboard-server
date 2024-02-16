@@ -5,7 +5,7 @@ import { Product } from '../product/product.model';
 import { Sale } from './sale.model';
 
 const createSalesIntoDB = async (Data: any) => {
-  const { productId, quantity, buyerName, saleDate } = Data;
+  const { productId, quantity, buyerName, saleDate, productPrice } = Data;
 
   // Validate product existence
   const productData = await Product.findById(productId);
@@ -27,6 +27,7 @@ const createSalesIntoDB = async (Data: any) => {
     quantity,
     buyerName,
     saleDate,
+    productPrice,
   });
 
   // Update the inventory
