@@ -1,4 +1,4 @@
-# assignment-5 Electric gadgets Management Dashboard server
+# Electric gadgets Management Dashboard server
 
 ## Run the server application locally
 
