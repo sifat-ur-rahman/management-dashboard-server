@@ -15,7 +15,7 @@
 - password: `123456`
 
 ### Admin:
-- email: `john3@example.com`
+- Email: `john3@example.com`
 - password: `123456`
 
 ## Run the server application locally
